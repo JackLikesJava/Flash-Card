@@ -1,15 +1,55 @@
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-body {
-  background-image: linear-gradient(deg, blue, darkblue, black);
+/* This is the parent to all the other divs. It hold everything in this */
+.maincontainer{
+  position: absolute;
+  width: 250px;
+  height: 320px;
+  background: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
-  
-  .container {
-    padding: 10px 16px;
-  }
-  h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: blueviolet;
-  }
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard{
+  position: relative; 
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+}
+
+/* this flips the card to front or back */
+.thecard:hover{
+  transform: rotateY(180deg);
+}
+
+/* FRONT CARD DEFAULT */
+ .thefront{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #080808;
+  color: rgb(252, 252, 252);
+}
+
+/* becuase the :hover is in effect, when you hover on the card it will go to this page which is the back page*/
+.theback{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #080808;
+  color: rgb(243, 239, 239);
+  text-align: center;
+  transform: rotateY(180deg); 
+}
+
+/* lets try to mess around with the css typing animation we can make it so that its like you're on the termal green code 
