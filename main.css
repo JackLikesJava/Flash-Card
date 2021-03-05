@@ -1,0 +1,15 @@
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+body {
+  background-image: linear-gradient(deg, blue, darkblue, black);
+}
+  
+  .container {
+    padding: 10px 16px;
+  }
+  h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: blueviolet;
+  }
